@@ -1,0 +1,43 @@
+### Recover all invoices
+GET http://localhost:3000/api/v1/invoices
+
+### Create a new invoice
+POST http://localhost:3000/api/v1/invoices
+Content-Type: application/json
+
+{
+  "test": "something",
+  "number": "INV-0001",
+  "date": "2021-06-01",
+  "mailStatus": "sent",
+  "customer": "64d4d8825d614a4ec5984ae3",
+  "products": ["name", "product 2", "product 3"]
+}
+
+### Create a new invoice
+POST http://localhost:3000/api/v1/invoices
+Content-Type: application/json
+
+{
+  "test": "something",
+  "number": 1,
+  "date": "2021-06-01",
+  "mailStatus": "sent",
+  "customer": "64d4d8825d614a4ec5984ae3",
+  "products": [{"name": "product 1", "price": 10, "quantity":10, "total": 100}]
+}
+
+
+### Get a invoice by id
+
+GET http://localhost:3000/api/v1/invoices/653160ee04dad81109f34374
+
+### Remove invoice
+DELETE http://localhost:3000/api/v1/invoices/65357605242458fb721c2796
+### Update invoices
+PATCH http://localhost:3000/api/v1/invoices/653160ee04dad81109f34374
+Content-Type: application/json
+
+{
+  "number": 9999
+}

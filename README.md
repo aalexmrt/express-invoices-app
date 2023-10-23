@@ -1,0 +1,2 @@
+- [ ] Improve handle errors and status codes. https://github.com/hagopj13/node-express-boilerplate/blob/master/src/services/user.service.js
+- [ ] Prepare export to pdf.
